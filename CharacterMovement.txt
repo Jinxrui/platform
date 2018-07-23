@@ -1,0 +1,26 @@
+def setup():
+    size(500, 500)
+    background(0, 0, 0)
+    global positionX, positionY, speedX, speedY, ACCEL
+    positionX = 250
+    positionY = 250
+    speedX = 5
+    speedY = 5
+    ACCEL = -9.8
+    
+def draw():
+    global positionX, positionY, speedX, speedY, ACCEL
+    background(0, 0, 0)
+    fill(255, 255, 255)
+    rect(positionX, positionY, 50, 50) 
+    
+def keyPressed():
+    global positionX, positionY, speedX, speedY, ACCEL
+    if key == 'w' or key == 'W':
+        positionY -= 50
+    elif key == 's' or key == 'S':
+        positionY += 50
+    elif key == 'a' or key == 'A':
+        positionX -= 50
+    elif key == 'd' or key == 'D':
+        positionX += 50
