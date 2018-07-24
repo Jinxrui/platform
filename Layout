@@ -1,0 +1,54 @@
+def setup():
+    size(922,615)
+    img = loadImage('level1-house.jpg')
+    background(0, 255, 0)
+    global rect_x, rect_y, speedX, speedY, img
+    rect_x = 150
+    rect_y = 490
+    speedX = 5
+    speedY= 5
+
+def draw(): 
+    
+    global rect_x, rect_y, speedX, speedY, img
+    noStroke()
+    image(img, 0, 0)
+    fill(0,0,255)
+    rect(rect_x, rect_y, 25, 25)
+    # if  rect_y == 440:
+    #     speedY = -speedY
+    # if rect_y == 560:
+    #     speedY = -speedY
+        
+    if key == 'w' or key == 'W':
+        rect_y -= speedY
+    elif key == 's' or key == 'S':
+        rect_y += speedY
+    elif key == 'a' or key == 'A':
+        rect_x -= speedX
+    elif key == 'd' or key == 'D':
+        rect_x += speedX
+    elif key == 'q' or key == 'Q':
+        rect_y =  rect_y
+        rect_x = rect_x
+
+    fill(0,0,0)
+    rect(66,605,850,10)
+    rect(63,500,10,120)
+    rect(910,450,10,150)
+    rect(450,270,320,10)
+    rect(200,440,325,10)
+    rect(600,440,310,10)
+    rect(510, 280, 10,80)
+    rect(200, 280, 10, 170)
+    rect(200, 440, 10, 80)
+    rect(630, 440, 10, 100)
+    quad(488, 110, 218, 267, 229, 266, 495, 114)
+    quad(771, 272, 500, 120, 494, 128, 752, 268)
+    # quad(776, 275, 779, 307, 785, 275, 784, 305)
+    print mouseX,mouseY
+    
+    # spikes
+    fill(255,0,0)
+    triangle(310, 514, 269, 605, 347, 605)
+    triangle(440, 550, 396, 451, 485, 451)
