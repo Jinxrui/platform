@@ -1,0 +1,10 @@
+
+ 
+    if player_x >= 900:
+        player_x = 900
+    if player <= 0:
+        player_x = 0
+    if player_y <= 0:
+       player_y = 0
+    if player_y >= 650:
+       player_y = 650
