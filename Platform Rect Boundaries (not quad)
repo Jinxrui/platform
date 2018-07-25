@@ -1,0 +1,82 @@
+     # bottom floor boundary
+    if rect_x >= 60 and rect_x <= 916 and rect_y >= 560:
+        rect_y = 560
+        rect_x = rect_x
+        
+     # left wall of door boundary
+    if rect_x <= 60 and rect_y <= 620 and rect_y >= 490:
+        rect_y = rect_y
+        rect_x = 63
+        
+     # right kitchen wall boundary
+    if rect_x >= 870 and rect_y <= 600 and rect_y >= 420:
+        rect_y = rect_y
+        rect_x = 870
+        
+    # attic platform(floor) Boundary
+    if rect_x >= 430 and rect_x <= 770  and rect_y >= 230 and rect_y < 270:
+        rect_y = 230
+        rect_x = rect_x
+    
+
+    if rect_x >= 430 and rect_x <= 770  and rect_y > 270 and rect_y < 280:
+        rect_y = 280
+        rect_x = rect_x
+        
+    # couch room boundary
+    if rect_x >= 200 and rect_x <= 520  and rect_y >= 400 and rect_y < 440:
+        rect_y = 400
+        rect_x = rect_x
+    
+
+    if rect_x >= 190 and rect_x <= 520  and rect_y < 450 and rect_y > 440:
+        rect_y = 450
+        rect_x = rect_x
+        
+    # bedroom side floor boundary
+    if rect_x >= 600 and rect_x <= 910  and rect_y >= 400 and rect_y < 440:
+        rect_y = 400
+        rect_x = rect_x
+    
+
+    if rect_x >= 600 and rect_x <= 910  and rect_y < 450 and rect_y > 440:
+        rect_y = 450
+        rect_x = rect_x  
+        
+     # wall in between the couch room and bedroom Boundary
+    if rect_x <= 510 and rect_x >= 500 and rect_y <= 360 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 510
+        
+    if rect_x  <= 500 and rect_x >= 470 and rect_y <= 360 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 470
+        
+    # left couch room wall Boundary
+    if rect_x >= 200 and rect_x <= 210 and rect_y <= 450 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 210
+        
+    # door wall near spike Boundary
+    if rect_x >= 160 and rect_x <= 200 and rect_y <= 520 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 160
+        
+    # kitchen room wall Boundary
+    if rect_x >= 580 and rect_x <= 630 and rect_y <= 540 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 580
+        
+    if rect_x <= 635 and rect_x > 630 and rect_y <= 540 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 640
+        
+    # bedroom wall on the right Boundary
+    if rect_x >= 775 and rect_x <= 785 and rect_y <= 312 and rect_y >= 272:
+        rect_y = rect_y
+        rect_x = 775
+    
+      # bedroom wall on the right Boundary
+    if rect_x >= 870 and rect_x <= 921 and rect_y <= 481 and rect_y >= 381:
+        rect_y = rect_y
+        rect_x = 870
