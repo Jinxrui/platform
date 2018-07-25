@@ -1,0 +1,194 @@
+def setup():
+    size(922,615)
+    img = loadImage('level1-house.jpg')
+    background(0, 255, 0)
+    global rect_x, rect_y, speedX, speedY, img
+    rect_x = 150
+    rect_y = 490
+    speedX = 5
+    speedY= 5
+
+def draw(): 
+    
+    global rect_x, rect_y, speedX, speedY, img
+    noStroke()
+    image(img, 0, 0)
+    fill(0,0,255)
+    rect(rect_x, rect_y, 50, 50)
+    # if  rect_y == 440:
+    #     speedY = -speedY
+    # if rect_y == 560:
+    #     speedY = -speedY
+        
+    if key == 'w' or key == 'W':
+        rect_y -= speedY
+    elif key == 's' or key == 'S':
+        rect_y += speedY
+    elif key == 'a' or key == 'A':
+        rect_x -= speedX
+    elif key == 'd' or key == 'D':
+        rect_x += speedX
+    elif key == 'q' or key == 'Q':
+        rect_y =  rect_y
+        rect_x = rect_x
+
+    fill(0,0,0)
+    # bottom rectangle
+    rect(66,605,850,10)
+    
+    #horizontal rects
+    # boundary for this rect
+    # if rect_x >= 60 and rect_x <= 916 and rect_y >= 560:
+    #     rect_y = 560
+    #     rect_x = rect_x
+        
+    # left bottom floor rectangle going verticle all the way
+    rect(63,500,10,120)
+    # boundary for this rectangle
+    # if rect_x <= 60 and rect_y <= 620 and rect_y >= 490:
+    #     rect_y = rect_y
+    #     rect_x = 63
+
+    # kitchen right side wall
+    # rect(910,450,10,150)
+    # boundary for this rect
+    # if rect_x >= 870 and rect_y <= 600 and rect_y >= 420:
+    #     rect_y = rect_y
+    #     rect_x = 870
+    # attic platform(floor)
+    rect(450,270,320,10)
+    # couch room
+    rect(200,440,325,10)
+    # bedroom side floor
+    rect(600,440,310,10)
+    # wall in between the couch room and bedroom
+    rect(510, 280, 10,80)
+    # couch room wall on the left
+    rect(200, 280, 10, 170)
+    # wall on the bottom floor closes to the spike on the left
+    rect(200, 440, 10, 80)
+    # kitchen room wall
+    rect(630, 440, 10, 100)
+    # bedroom wall on the right
+    rect(911,381,10,100)
+    rect(775,272,10,40)
+    # roof on the left
+    quad(488, 110, 218, 267, 229, 266, 495, 114)
+    # roof on the left
+    quad(771, 272, 500, 120, 494, 128, 752, 268)
+    # roof part on top of the door
+    quad(199, 443, 71, 497, 74, 505, 199, 451)
+    # roof on the left side
+    quad(785, 304, 777, 309, 910, 383, 917, 378)
+    print mouseX,mouseY
+    
+    # spikes
+    fill(255,0,0)
+    # first spike
+    triangle(310, 514, 269, 605, 347, 605)
+    # second spike
+    triangle(440, 550, 396, 451, 485, 451)
+    # third spike in couch room
+    triangle(400,360,362,438,440,439)
+    # 4th spike in bedroom spike
+    # triangle(700,350,664,441,737,440)
+    
+    
+     
+    
+    
+    
+     # bottom floor boundary
+    if rect_x >= 60 and rect_x <= 916 and rect_y >= 560:
+        rect_y = 560
+        rect_x = rect_x
+        
+     # left wall of door boundary
+    if rect_x <= 60 and rect_y <= 620 and rect_y >= 490:
+        rect_y = rect_y
+        rect_x = 63
+        
+     # right kitchen wall boundary
+    if rect_x >= 870 and rect_y <= 600 and rect_y >= 420:
+        rect_y = rect_y
+        rect_x = 870
+        
+    # attic platform(floor) Boundary
+    if rect_x >= 430 and rect_x <= 770  and rect_y >= 230 and rect_y < 270:
+        rect_y = 230
+        rect_x = rect_x
+    
+
+    if rect_x >= 430 and rect_x <= 770  and rect_y > 270 and rect_y < 280:
+        rect_y = 280
+        rect_x = rect_x
+        
+    # couch room boundary
+    if rect_x >= 200 and rect_x <= 520  and rect_y >= 400 and rect_y < 440:
+        rect_y = 400
+        rect_x = rect_x
+    
+
+    if rect_x >= 190 and rect_x <= 520  and rect_y < 450 and rect_y > 440:
+        rect_y = 450
+        rect_x = rect_x
+        
+    # bedroom side floor boundary
+    if rect_x >= 600 and rect_x <= 910  and rect_y >= 400 and rect_y < 440:
+        rect_y = 400
+        rect_x = rect_x
+    
+
+    if rect_x >= 600 and rect_x <= 910  and rect_y < 450 and rect_y > 440:
+        rect_y = 450
+        rect_x = rect_x  
+        
+     # wall in between the couch room and bedroom Boundary
+    if rect_x <= 510 and rect_x >= 500 and rect_y <= 360 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 510
+        
+    if rect_x  <= 500 and rect_x >= 470 and rect_y <= 360 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 470
+        
+    # left couch room wall Boundary
+    if rect_x >= 200 and rect_x <= 210 and rect_y <= 450 and rect_y >= 280:
+        rect_y = rect_y
+        rect_x = 210
+        
+    # door wall near spike Boundary
+    if rect_x >= 160 and rect_x <= 200 and rect_y <= 520 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 160
+        
+    # kitchen room wall Boundary
+    if rect_x >= 580 and rect_x <= 630 and rect_y <= 540 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 580
+        
+    if rect_x <= 635 and rect_x > 630 and rect_y <= 540 and rect_y >= 440:
+        rect_y = rect_y
+        rect_x = 640
+        
+    # bedroom wall on the right Boundary
+    if rect_x >= 775 and rect_x <= 785 and rect_y <= 312 and rect_y >= 272:
+        rect_y = rect_y
+        rect_x = 775
+    
+      # bedroom wall on the right Boundary
+    if rect_x >= 870 and rect_x <= 921 and rect_y <= 481 and rect_y >= 381:
+        rect_y = rect_y
+        rect_x = 870
+        # first spike
+    if rect_x > 269 and rect_x < 347 and rect_y >= 514:
+        rect_x = 150
+        rect_y = 490
+        # second spike
+    if rect_x > 396 and rect_x < 485 and rect_y < 540 and rect_y > 440:
+        rect_x = 150
+        rect_y = 490
+        # Third spike
+    if rect_x > 362 and rect_x < 440 and rect_y > 360 and rect_y < 440:
+        rect_x = 150
+        rect_y = 490
